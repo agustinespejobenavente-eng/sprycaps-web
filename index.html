@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'">
+  <title>SpryCaps | Rendir sin depender de la cafeína</title>
+  <meta name="description" content="SpryCaps es una cápsula reutilizable con recargas, sin cafeína, pensada para universitarios en semana de exámenes. Proyecto en desarrollo: súmate a la lista de espera.">
+  <meta name="theme-color" content="#FCFE5B">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="SpryCaps">
+  <meta property="og:title" content="SpryCaps | Rendir sin depender de la cafeína">
+  <meta property="og:description" content="Cápsula reutilizable con recargas, sin cafeína. Proyecto en desarrollo: súmate a la lista de espera.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo de SpryCaps en verde sobre fondo amarillo">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/fraunces-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" id="inicio">
+    <div class="wrap nav__inner">
+      <a class="nav__logo" href="#inicio" aria-label="SpryCaps, volver al inicio">
+        <img src="assets/img/logo-verde.webp" alt="" width="900" height="215">
+      </a>
+      <nav aria-label="Secciones">
+        <ul class="nav__links">
+          <li><a href="#problema">Problema</a></li>
+          <li><a href="#idea">La idea</a></li>
+          <li><a href="#precio">Precio</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- 1. HERO (amarillo) -->
+    <section class="s s--amarillo hero" aria-labelledby="titulo-hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <img class="hero__logo" src="assets/img/logo-verde.webp" alt="SpryCaps" width="900" height="215" fetchpriority="high">
+          <h1 id="titulo-hero">Rendir sin depender de la <em>cafeína.</em></h1>
+          <p class="lead">SpryCaps es una cápsula reutilizable con recargas, sin cafeína, pensada para tu semana de exámenes. Estamos validando la fórmula y armando la lista de espera.</p>
+          <p><a class="btn cta" href="#lista-de-espera">Unirme a la lista de espera</a></p>
+          <p class="chip">Proyecto en desarrollo · Chile</p>
+        </div>
+        <div class="hero__media">
+          <span class="pill pill--lila pill--a" aria-hidden="true"></span>
+          <span class="pill pill--verde pill--b" aria-hidden="true"></span>
+          <img class="hero__photo" src="assets/img/mano-capsula.webp" alt="Una mano sostiene una cápsula entre el pulgar y el índice, sobre fondo gris claro" width="640" height="850" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROBLEMA (lila) -->
+    <section class="s s--lila" id="problema" aria-labelledby="titulo-problema">
+      <div class="wrap">
+        <h2 id="titulo-problema">Entre quienes consultamos, <em>se estudia a punta de cafeína.</em></h2>
+        <p class="lead lead--narrow">Le preguntamos a jóvenes y a universitarios cómo viven las semanas de exámenes. Esto nos contaron.</p>
+        <ul class="stats">
+          <li class="card stat">
+            <p class="stat__num">49,7&nbsp;%</p>
+            <p class="stat__txt">toma energéticas por energía rápida.</p>
+            <p class="stat__src">Encuesta SpryCaps · 170 personas de 18 a 35 años</p>
+          </li>
+          <li class="card stat">
+            <p class="stat__num">37&nbsp;%</p>
+            <p class="stat__txt">las asocia a taquicardia, ansiedad o insomnio.</p>
+            <p class="stat__src">Encuesta SpryCaps · 170 personas de 18 a 35 años</p>
+          </li>
+          <li class="card stat">
+            <p class="stat__num">7 de 11</p>
+            <p class="stat__txt">dependen de la cafeína para estudiar.</p>
+            <p class="stat__src">Entrevistas en profundidad · 11 universitarios de 20 a 23 años, octubre de 2026</p>
+          </li>
+        </ul>
+        <figure class="quote">
+          <blockquote>
+            <p>“No he visto otras opciones, porque siento que no las hay.”</p>
+          </blockquote>
+          <figcaption>Una de las personas entrevistadas, sobre alternativas sin cafeína</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. LA IDEA (verde) -->
+    <section class="s s--verde" id="idea" aria-labelledby="titulo-idea">
+      <div class="wrap">
+        <h2 id="titulo-idea">Una cápsula que <em>vuelves a usar.</em></h2>
+        <p class="lead lead--narrow">Compras la cápsula una vez y la recargas cuando quieras: el contenido de cada recarga se vierte en tu propia botella.</p>
+        <ul class="cards3">
+          <li class="card">
+            <h3>Sin cafeína</h3>
+            <p>Una alternativa pensada para quienes quieren o necesitan dejar la cafeína.</p>
+          </li>
+          <li class="card">
+            <h3>De bolsillo</h3>
+            <p>Pequeña y con tapón: la llevas contigo a la biblioteca, al campus o a la sala de estudio.</p>
+          </li>
+          <li class="card">
+            <h3>Sin basura en cada uso</h3>
+            <p>La cápsula se rellena con recargas en vez de usar un envase nuevo cada vez.</p>
+          </li>
+        </ul>
+        <div class="renders">
+          <figure class="render">
+            <img src="assets/img/vista.webp" alt="La cápsula SpryCaps cerrada, vista en perspectiva (prototipo)" width="640" height="640" loading="lazy">
+            <figcaption>La cápsula cerrada · prototipo</figcaption>
+          </figure>
+          <figure class="render">
+            <img src="assets/img/explotada.webp" alt="La cápsula SpryCaps desarmada en tres piezas: capuchón, cuerpo con boquilla y tapón (prototipo)" width="640" height="640" loading="lazy">
+            <figcaption>Sus tres piezas · prototipo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CÓMO SE USA (blanco/crema) -->
+    <section class="s s--crema" id="como-se-usa" aria-labelledby="titulo-uso">
+      <div class="wrap">
+        <h2 id="titulo-uso">Cómo se usa, <em>en tres pasos.</em></h2>
+        <ol class="steps">
+          <li class="card">
+            <span class="steps__n" aria-hidden="true">1</span>
+            <h3>Rellena</h3>
+            <p>Llena la cápsula con una recarga y ciérrala con un clic.</p>
+          </li>
+          <li class="card">
+            <span class="steps__n" aria-hidden="true">2</span>
+            <h3>Vierte</h3>
+            <p>Apóyala sobre tu botella: el contenido sale por la boquilla.</p>
+          </li>
+          <li class="card">
+            <span class="steps__n" aria-hidden="true">3</span>
+            <h3>Cierra y lleva</h3>
+            <p>Ponle el tapón y el capuchón, y guárdala en tu mochila.</p>
+          </li>
+        </ol>
+        <figure class="demo">
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)" srcset="assets/img/prototipo-poster.webp">
+            <img src="assets/img/prototipo-animado.webp" alt="Animación del prototipo: se llena la cápsula, se cierra con un clic, se vierte su contenido en una botella y se guarda con tapón y capuchón" width="560" height="315" loading="lazy">
+          </picture>
+          <figcaption>Animación del prototipo conceptual (versión 3)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. PARA QUIÉN Y PRECIO (lila) -->
+    <section class="s s--lila" id="precio" aria-labelledby="titulo-precio">
+      <div class="wrap">
+        <h2 id="titulo-precio">Para quién es <em>y cuánto costaría.</em></h2>
+        <div class="split">
+          <div class="split__text">
+            <p class="lead">Para universitarios en semana de exámenes que quieren o necesitan dejar la cafeína.</p>
+            <p>Si ya estás cómodo con la cafeína, SpryCaps no es para ti. Si no, queremos que tengas otra opción.</p>
+          </div>
+          <div class="card price">
+            <p class="badge">Precio de prueba</p>
+            <p class="price__main"><span class="price__num">$7.000</span> el pack de 10</p>
+            <p class="price__sub">$700 por porción. Una lata de energética cuesta $1.500.</p>
+            <p class="price__note">Es un precio de prueba que seguimos validando; puede cambiar.</p>
+          </div>
+        </div>
+        <div class="midcta">
+          <p>¿Te interesa? Deja tu correo y te avisamos cuando haya novedades.</p>
+          <p><a class="btn cta" href="#lista-de-espera">Unirme a la lista de espera</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. LO QUE FALTA DEMOSTRAR (blanco/crema) -->
+    <section class="s s--crema" id="validacion" aria-labelledby="titulo-validacion">
+      <div class="wrap">
+        <h2 id="titulo-validacion">Lo que falta <em>demostrar.</em></h2>
+        <p class="lead lead--narrow">Preferimos contarte dónde estamos antes que prometerte de más. La fórmula sigue en desarrollo.</p>
+        <ol class="timeline">
+          <li>
+            <p class="tag">Primeras señales</p>
+            <h3>Lo que ya vimos</h3>
+            <p>Segmento, problema, propuesta y precio muestran señales positivas en pruebas pequeñas: una encuesta de 170 personas, 11 entrevistas y 10 de 10 personas cercanas invitadas que se inscribieron en la lista de espera. Es una señal inicial, no una prueba de mercado.</p>
+          </li>
+          <li>
+            <p class="tag">Planeado</p>
+            <h3>Formular con un laboratorio</h3>
+            <p>Definir la mezcla con un laboratorio: de 3 a 4 meses.</p>
+          </li>
+          <li>
+            <p class="tag">Después</p>
+            <h3>Analizar y producir</h3>
+            <p>Análisis y producción con un maquilador que ya cuenta con autorización de la SEREMI. Estimamos de 6 a 9 meses hasta una primera venta, si todo sale bien.</p>
+          </li>
+          <li>
+            <p class="tag">Por probar</p>
+            <h3>Lo que aún no sabemos</h3>
+            <p>Por dónde vender, si la gente recompra las recargas y qué ventaja real tiene frente a las energéticas y el café.</p>
+          </li>
+        </ol>
+        <p class="honest">Hasta terminar la formulación no prometemos energía ni efectos para la salud: primero tiene que demostrarse.</p>
+      </div>
+    </section>
+
+    <!-- 7. EQUIPO (amarillo) -->
+    <section class="s s--amarillo" id="equipo" aria-labelledby="titulo-equipo">
+      <div class="wrap">
+        <h2 id="titulo-equipo">El equipo <em>detrás de SpryCaps.</em></h2>
+        <ul class="team">
+          <li class="card person">
+            <span class="person__av" aria-hidden="true">F</span>
+            <h3>Fernanda Hernández</h3>
+            <p>Representante del proyecto · <abbr title="Universidad del Desarrollo">UDD</abbr></p>
+          </li>
+          <li class="card person">
+            <span class="person__av" aria-hidden="true">C</span>
+            <h3>Constanza Villalobos</h3>
+            <p>Universidad de Chile</p>
+          </li>
+          <li class="card person">
+            <span class="person__av" aria-hidden="true">A</span>
+            <h3>Agustín Espejo</h3>
+            <p><abbr title="Universidad del Desarrollo">UDD</abbr></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. CIERRE (verde) con formulario -->
+    <section class="s s--verde closing" id="lista-de-espera" aria-labelledby="titulo-cierre">
+      <div class="wrap closing__inner">
+        <img class="closing__logo" src="assets/img/logo-amarillo.webp" alt="SpryCaps" width="900" height="215" loading="lazy">
+        <h2 id="titulo-cierre" tabindex="-1">Súmate a la <em>lista de espera.</em></h2>
+        <p class="lead lead--narrow">Déjanos tu correo y te escribiremos solo para contarte las novedades y el lanzamiento de SpryCaps.</p>
+
+        <div class="card formcard">
+          <form id="waitlist-form" action="https://formspree.io/f/maeezjlp" method="POST" novalidate>
+            <div class="field">
+              <label for="email">Tu correo</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="nombre@correo.cl" required aria-describedby="email-error">
+              <p class="error" id="email-error" hidden></p>
+            </div>
+            <div class="field field--check">
+              <input id="consent" name="consentimiento" type="checkbox" value="si" required aria-describedby="consent-error">
+              <label for="consent">Acepto que SpryCaps guarde mi correo para avisarme novedades y el lanzamiento, y he leído el aviso de privacidad de abajo.</label>
+              <p class="error" id="consent-error" hidden></p>
+            </div>
+            <p><button class="btn btn--submit" type="submit" id="submit-btn">Unirme a la lista de espera</button></p>
+            <p class="error error--form" id="form-error" role="alert" hidden></p>
+          </form>
+
+          <div class="success" id="form-success" tabindex="-1" hidden>
+            <h3>¡Listo, quedaste en la lista!</h3>
+            <p>Te escribiremos cuando haya novedades. Gracias por sumarte.</p>
+          </div>
+
+          <div class="privacy" id="privacidad">
+            <h3>Aviso de privacidad</h3>
+            <ul>
+              <li><strong>Qué dato pedimos:</strong> solo tu correo electrónico y tu consentimiento.</li>
+              <li><strong>Para qué:</strong> avisarte novedades y el lanzamiento de SpryCaps. No lo usamos para nada más ni lo vendemos.</li>
+              <li><strong>Quién lo recibe:</strong> el equipo de SpryCaps (Fernanda Hernández, Constanza Villalobos y Agustín Espejo), a través del servicio de formularios Formspree.</li>
+              <li><strong>Tus derechos (Ley 19.628):</strong> puedes pedir ver, corregir o borrar tu correo en cualquier momento escribiendo a <a href="mailto:agustin.espejo.benavente@gmail.com">agustin.espejo.benavente@gmail.com</a>.</li>
+              <li><strong>Cookies:</strong> esta página no usa cookies ni analítica.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="devnote">SpryCaps es un proyecto en desarrollo: la fórmula sigue en validación y todavía no está a la venta.</p>
+        <p class="foot">© 2026 SpryCaps · <a href="#inicio">Volver arriba</a></p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
