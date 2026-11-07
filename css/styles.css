@@ -241,7 +241,7 @@ h2 + .lead--narrow { margin-top: 1.25rem; }
 .cards3 p { margin: 0; }
 .renders { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
 .render { margin: 0; background: var(--crema); color: var(--verde); border-radius: var(--radius); overflow: hidden; }
-.render img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.render img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #F8F8F8; }
 .render figcaption { padding: 0.75rem 1rem 1rem; font-size: 0.9375rem; font-weight: 600; }
 
 /* ---------- Cómo se usa ---------- */
@@ -260,7 +260,9 @@ h2 + .lead--narrow { margin-top: 1.25rem; }
   font-family: var(--serif);
   font-size: 1.4rem;
 }
-.demo { margin: 1.5rem 0 0; max-width: 36rem; }
+.uso { display: grid; gap: 1.5rem; margin-top: 2rem; }
+.uso .steps { margin-top: 0; }
+.demo { margin: 0; }
 .demo img { width: 100%; border-radius: var(--radius); background: var(--verde); }
 .demo figcaption { margin-top: 0.6rem; font-size: 0.9375rem; }
 
@@ -286,14 +288,15 @@ h2 + .lead--narrow { margin-top: 1.25rem; }
 
 /* ---------- Línea de tiempo ---------- */
 .timeline { position: relative; margin-top: 2rem; max-width: 44rem; padding-left: calc(1.5rem + 3px); }
-.timeline::before {
+/* La línea va de punto a punto: cada tramo nace en un punto y termina en el siguiente,
+   así que se acaba justo en el último. */
+.timeline li:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: calc(-1.5rem - 3px);
+  top: calc(0.35rem + 8px);
+  bottom: calc(-0.35rem - 8px);
   width: 3px;
-  border-radius: 3px;
   background: var(--verde);
   transform-origin: top;
 }
@@ -309,6 +312,7 @@ h2 + .lead--narrow { margin-top: 1.25rem; }
   border-radius: 999px;
   background: var(--amarillo);
   border: 3px solid var(--verde);
+  z-index: 1;
 }
 .timeline h3 { margin-bottom: 0.35rem; }
 .timeline p { margin: 0; }
@@ -399,8 +403,11 @@ input[aria-invalid="true"] { border-width: 3px; }
   .hero__logo { width: 13rem; margin-bottom: 1.75rem; }
   .stats { grid-template-columns: repeat(3, 1fr); }
   .cards3 { grid-template-columns: repeat(3, 1fr); }
-  .renders { max-width: 42rem; }
+  .renders { gap: 1.5rem; margin-top: 1.5rem; }
+  .render img { aspect-ratio: 4 / 3; }
   .steps { grid-template-columns: repeat(3, 1fr); }
+  .uso { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2rem; align-items: center; }
+  .uso .steps { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
   .team { grid-template-columns: repeat(3, 1fr); }
   .person { grid-template-columns: 1fr; row-gap: 0.25rem; }
@@ -473,10 +480,11 @@ html { scrollbar-color: var(--verde) var(--crema); }
     .stat:nth-child(2) { animation-range: entry 12% entry 62%; }
     .stat:nth-child(3) { animation-range: entry 19% entry 69%; }
 
-    .timeline { view-timeline: --tl block; }
-    .timeline::before { animation: line-draw linear both; animation-timeline: --tl; animation-range: entry 10% cover 70%; }
+    /* Frente de lectura al 75 % de la pantalla: el punto se enciende al llegar ahí y el tramo
+       crece a la misma altura, hasta tocar el siguiente punto. */
     .timeline li { view-timeline: --tli block; }
-    .timeline li::before { animation: dot-on linear both; animation-timeline: --tli; animation-range: entry 15% entry 65%; }
+    .timeline li::before { animation: dot-on linear both; animation-timeline: --tli; animation-range: cover 18vh cover 28vh; }
+    .timeline li:not(:last-child)::after { animation: line-draw linear both; animation-timeline: --tli; animation-range: cover 25vh cover calc(100% - 75vh); }
 
     .steps li { view-timeline: --step block; }
     .steps__n { animation: badge-pop linear both; animation-timeline: --step; animation-range: entry 15% entry 65%; }
@@ -506,11 +514,10 @@ html { scrollbar-color: var(--verde) var(--crema); }
     .cards3 .card { animation: fade-up linear both; animation-timeline: view(); animation-range: entry 5% entry 60%; }
     .cards3 .card:nth-child(2) { animation-range: entry 12% entry 67%; }
     .cards3 .card:nth-child(3) { animation-range: entry 19% entry 74%; }
-    .render, .demo { animation: media-open linear both; animation-timeline: view(); animation-range: entry 0% entry 75%; }
+    .render, .demo img { animation: media-open linear both; animation-timeline: view(); animation-range: entry 0% entry 75%; }
 
     /* Pasos: cada tarjeta entra desde un lado alterno */
-    .steps .card:nth-child(odd) { animation: slide-l linear both; animation-timeline: view(); animation-range: entry 5% entry 60%; }
-    .steps .card:nth-child(even) { animation: slide-r linear both; animation-timeline: view(); animation-range: entry 5% entry 60%; }
+    .steps .card { animation: slide-l linear both; animation-timeline: view(); animation-range: entry 5% entry 60%; }
 
     /* Precio: el texto y la tarjeta se encuentran; el botón del medio sube */
     .split__text { animation: slide-l linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
