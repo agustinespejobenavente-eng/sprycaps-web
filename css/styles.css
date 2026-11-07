@@ -280,6 +280,7 @@ h2 + .lead--narrow { margin-top: 1.25rem; }
 .price__num { font-family: var(--serif); font-weight: 300; font-size: 3.5rem; line-height: 1; letter-spacing: -0.02em; margin-right: 0.35rem; }
 .price__sub { font-size: 1.1875rem; margin-bottom: 0.75rem; }
 .price__note { font-size: 0.9375rem; margin: 0; }
+.price__main--text { font-family: var(--serif); font-weight: 300; font-size: 2rem; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 0.6rem; }
 .midcta { margin-top: 2.5rem; }
 .midcta p:first-child { font-size: 1.1875rem; max-width: 30rem; }
 
